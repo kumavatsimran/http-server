@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const port = 8000;
 
-//
+
 const fileHandle = (req, res) => {
   let fileName = "";
   console.log(req.url)
@@ -20,8 +20,7 @@ const fileHandle = (req, res) => {
       fileName = "./about.html"
       break;
   };
-  // console.log()
-  // res.end("Welcome to server");
+ 
   fs.readFile(fileName, (err, file) => {
     console.log(err)
     console.log(file)
